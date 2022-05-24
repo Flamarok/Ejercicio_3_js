@@ -48,23 +48,29 @@ formulario.addEventListener("submit", (e) => {
 });
 
 
-/* const buscadorPizzas = (resultado) => {
+const buscadorPizzas = (resultado) => {
   pizzas.map(pizza => {
     const h2 = document.querySelector("body > h2")
     const h4 = document.querySelector("body > h4")
-    if (resultado == pizza.id) {
-    h2.textContent = `Nombre: ${pizza.name} `
-    h4.textContent = `Precio:${pizza.precio}`
-    }  else {
+    const p = document.createElement('p')
+    if (resultado == pizza.id)/*  && pizza.indexOf() != -1) */ {
       h2.textContent = `Nombre: ${pizza.name} `
-      h4.textContent = `Precio:${pizza.precio}` 
-    } 
-    // si el parametro "resultado" es distinto al id saltara el mensaje del else (sin terminar de recorrer todo el array). 
+      h4.textContent = `Precio:${pizza.precio}`
+      p.textContent = `Ingredientes:${pizza.ingredientes}`
+    }  /* else if (pizza.indexOf() == -1)  {
+      h2.textContent = `No existe ese id de pizza `
+      h4.textContent = `-` 
+    }  */
+
   })
-};  */
+  
+}; 
 
 
-// probando filter
+
+// hacer un p con los ingredientes de la pizza que se muestra 
+
+/* // probando filter
 const buscadorPizzas = (resultado) => {
   const pizzaDeseada = pizzas.filter(pizza => resultado == pizza.id);
   const h2 = document.querySelector("body > h2");
@@ -78,4 +84,4 @@ const buscadorPizzas = (resultado) => {
         h4.textContent = `Pre` 
       }
   })
-}
+} */
