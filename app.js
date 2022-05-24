@@ -27,6 +27,6 @@ const buscadorPizzas = (resultado) => {
     if (resultado == pizza.id) {
       h2.textContent = "Nombre: "+name+" "
       h4.textContent = "Precio: "+precio+""
-    }  
+    }
   })
 };
