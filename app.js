@@ -56,7 +56,11 @@ const buscadorPizzas = (resultado) => {
       h2.textContent = `Nombre: ${pizza.name} `
       h4.textContent = `Precio:${pizza.precio}`
       p.textContent = `Ingredientes:${pizza.ingredientes}`
-    } 
+    } else {if (resultado < 0 || resultado > pizzas.length - 1 ) {
+      h2.textContent = "no existe"
+    }
+
+    }
   })
   
 }; 
