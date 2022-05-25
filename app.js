@@ -52,36 +52,14 @@ const buscadorPizzas = (resultado) => {
   pizzas.map(pizza => {
     const h2 = document.querySelector("body > h2")
     const h4 = document.querySelector("body > h4")
-    const p = document.createElement('p')
-    if (resultado == pizza.id)/*  && pizza.indexOf() != -1) */ {
+    if (resultado == pizza.id)  {
       h2.textContent = `Nombre: ${pizza.name} `
       h4.textContent = `Precio:${pizza.precio}`
       p.textContent = `Ingredientes:${pizza.ingredientes}`
-    }  /* else if (pizza.indexOf() == -1)  {
-      h2.textContent = `No existe ese id de pizza `
-      h4.textContent = `-` 
-    }  */
-
+    } 
   })
   
 }; 
 
 
-
-// hacer un p con los ingredientes de la pizza que se muestra 
-
-/* // probando filter
-const buscadorPizzas = (resultado) => {
-  const pizzaDeseada = pizzas.filter(pizza => resultado == pizza.id);
-  const h2 = document.querySelector("body > h2");
-  const h4 = document.querySelector("body > h4");
-  pizzaDeseada.forEach( elemento => {
-    if (resultado == elemento.id) {
-      h2.textContent = `Nombre: ${elemento.name} `
-      h4.textContent = `Precio:${elemento.precio}`
-      }  else {
-        h2.textContent = `Nom `
-        h4.textContent = `Pre` 
-      }
-  })
-} */
+// no se logra emitir mensaje de error
